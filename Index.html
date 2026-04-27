@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SUSHI Vibe - The Art of Joyful Sushi. Home catering, weddings, birthdays, corporate events. Book your unforgettable sushi experience!">
+    <meta name="keywords" content="sushi catering, Addis Ababa, sushi events, weddings, birthdays, corporate catering, Japanese food">
+    <meta name="author" content="SUSHI Vibe">
+    <meta property="og:title" content="SUSHI Vibe | The Art of Joyful Sushi">
+    <meta property="og:description" content="Book your unforgettable sushi experience! Catering for weddings, birthdays, corporate events & more.">
+    <meta property="og:type" content="website">
+    <title>SUSHI Vibe | The Art of Joyful Sushi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #E63946;
+            --primary-dark: #C1121F;
+            --primary-light: #F4A2A8;
+            --dark: #1A1A2E;
+            --dark-light: #2D2D44;
+            --cream: #FFFBF5;
+            --cream-dark: #F5EDE0;
+            --warm-white: #FFFEFA;
+            --gold: #D4A853;
+            --gold-light: #F9E4B7;
+            --text-dark: #1A1A2E;
+            --text-light: #6B6B7B;
+            --white: #FFFFFF;
+            --shadow-sm: 0 2px 8px rgba(26, 26, 46, 0.04);
+            --shadow-md: 0 8px 30px rgba(26, 26, 46, 0.08);
+            --shadow-lg: 0 20px 50px rgba(26, 26, 46, 0.12);
+            --shadow-xl: 0 30px 70px rgba(26, 26, 46, 0.18);
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 30px;
+            --radius-xl: 40px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--warm-white);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+
+        .jp {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* ============ BUTTONS ============ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.3px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            justify-content: center;
+            white-space: nowrap;
+        }
+
+        .btn--primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 8px 25px rgba(230, 57, 70, 0.3);
+        }
+
+        .btn--primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(230, 57, 70, 0.4);
+        }
+
+        .btn--outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn--outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .btn--dark {
+            background: var(--dark);
+            color: white;
+            box-shadow: 0 8px 25px rgba(26, 26, 46, 0.3);
+        }
+
+        .btn--dark:hover {
+            background: var(--dark-light);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(26, 26, 46, 0.4);
+        }
+
+        /* ============ HEADER ============ */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 254, 250, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(230, 57, 70, 0.1);
+            transition: var(--transition);
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header__nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+
+        .header__logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1001;
+        }
+
+        .header__logo-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: white;
+            border: 2px solid var(--primary);
+            transition: var(--transition);
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            font-size: 0.9rem;
+        }
+
+        .header__logo:hover .header__logo-icon {
+            transform: scale(1.05);
+            background: var(--primary);
+        }
+
+        .header__logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: 0.5px;
+        }
+
+        .header__logo-text span {
+            color: var(--primary);
+        }
+
+        .header__menu {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .header__link {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--dark);
+            position: relative;
+            padding: 5px 0;
+            letter-spacing: 0.3px;
+        }
+
+        .header__link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .header__link:hover {
+            color: var(--primary);
+        }
+
+        .header__link:hover::after {
+            width: 100%;
+        }
+
+        .header__cta {
+            background: var(--primary);
+            color: white !important;
+            padding: 10px 22px !important;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .header__cta:hover {
+            background: var(--primary-dark);
+            color: white !important;
+            transform: translateY(-2px);
+        }
+
+        .header__cta::after {
+            display: none;
+        }
+
+        .header__hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+
+        .header__hamburger span {
+            width: 30px;
+            height: 3px;
+            background: var(--dark);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .header__hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 7px);
+        }
+        .header__hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .header__hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -7px);
+        }
+
+        /* ============ HERO SECTION ============ */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 50%, var(--dark) 100%);
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -150px;
+            right: -100px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(230, 57, 70, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 168, 83, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero__pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero__text {
+            max-width: 600px;
+        }
+
+        .hero__badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--gold-light);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .hero__badge i {
+            color: var(--primary);
+            margin-right: 6px;
+        }
+
+        .hero__title {
+            font-size: 4rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .hero__title .jp {
+            display: block;
+            font-size: 2.5rem;
+            color: var(--primary-light);
+            margin-top: 5px;
+            letter-spacing: 4px;
+        }
+
+        .hero__subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 35px;
+            font-weight: 400;
+            line-height: 1.8;
+        }
+
+        .hero__buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hero__visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero__sushi-icon {
+            font-size: 14rem;
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 20px 40px rgba(230, 57, 70, 0.3));
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px) rotate(-3deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(3deg);
+            }
+        }
+
+        .hero__floating-card {
+            position: absolute;
+            bottom: 20px;
+            left: -10px;
+            background: white;
+            padding: 15px 22px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-xl);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            animation: float 5s ease-in-out infinite;
+            animation-delay: 1s;
+            color: var(--dark);
+        }
+
+        .hero__floating-card i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .hero__floating-card span {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* ============ SECTION STYLES ============ */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section--cream {
+            background: var(--cream);
+        }
+
+        .section--dark {
+            background: var(--dark);
+            color: white;
+        }
+
+        .section__header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section__subtitle {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section__title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 18px;
+        }
+
+        .section--dark .section__title {
+            color: white;
+        }
+
+        .section__desc {
+            color: var(--text-light);
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .section--dark .section__desc {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ============ ABOUT SECTION ============ */
+        .about__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about__visual {
+            text-align: center;
+            position: relative;
+        }
+
+        .about__icon-big {
+            font-size: 10rem;
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 20px 40px rgba(230, 57, 70, 0.2));
+        }
+
+        .about__badge {
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            background: var(--dark);
+            color: white;
+            padding: 20px 30px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--primary);
+        }
+
+        .about__badge-icon {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .about__badge-text {
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--gold-light);
+        }
+
+        .about__text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .about__text p {
+            color: var(--text-light);
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .about__features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .about__feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .about__feature i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        /* ============ SERVICES / EVENTS ============ */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-slow);
+            border-top: 5px solid transparent;
+            position: relative;
+        }
+
+        .service-card:hover {
+            box-shadow: var(--shadow-xl);
+            transform: translateY(-10px);
+            border-top-color: var(--primary);
+        }
+
+        .service-card__icon {
+            width: 80px;
+            height: 80px;
+            background: var(--cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-card__icon {
+            background: var(--primary);
+            color: white;
+        }
+
+        .service-card__title {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .service-card__desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* ============ CTA SECTION ============ */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section__content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section__title {
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-section__desc {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ============ TESTIMONIALS ============ */
+        .testimonials__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 35px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            border-left: 5px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-lg);
+            border-left-color: var(--gold);
+        }
+
+        .testimonial-card__quote {
+            font-size: 3rem;
+            color: var(--primary-light);
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card__text {
+            font-style: italic;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card__author {
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .testimonial-card__event {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* ============ CONTACT SECTION ============ */
+        .contact__grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact__info {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact__info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact__info-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .contact__info-label {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 3px;
+        }
+
+        .contact__info-value {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .contact__form {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact__form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact__form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .contact__form-input,
+        .contact__form-textarea,
+        .contact__form-select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #E8E8F0;
+            border-radius: var(--radius-sm);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            background: var(--warm-white);
+            color: var(--text-dark);
+        }
+
+        .contact__form-input:focus,
+        .contact__form-textarea:focus,
+        .contact__form-select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.08);
+        }
+
+        .contact__form-textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .contact__form-select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B6B7B' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 18px center;
+        }
+
+        /* ============ FOOTER ============ */
+        .footer {
+            background: var(--dark);
+            color: #B0B0C0;
+            padding: 70px 0 0;
+        }
+
+        .footer__grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer__brand-desc {
+            margin-top: 15px;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .footer__title {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .footer__links {
+            list-style: none;
+        }
+
+        .footer__links li {
+            margin-bottom: 10px;
+        }
+
+        .footer__links a {
+            color: #B0B0C0;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .footer__links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer__social {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .footer__social-link {
+            width: 42px;
+            height: 42px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: #B0B0C0;
+            font-size: 1.1rem;
+        }
+
+        .footer__social-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer__bottom {
+            text-align: center;
+            padding: 25px 0;
+            font-size: 0.9rem;
+            color: #707080;
+        }
+
+        /* ============ BACK TO TOP ============ */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            border: none;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-5px);
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 1024px) {
+            .hero__content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero__text {
+                max-width: 100%;
+            }
+            .hero__sushi-icon {
+                font-size: 9rem;
+            }
+            .hero__title {
+                font-size: 3rem;
+            }
+            .hero__title .jp {
+                font-size: 2rem;
+            }
+            .about__grid {
+                grid-template-columns: 1fr;
+            }
+            .contact__grid {
+                grid-template-columns: 1fr;
+            }
+            .footer__grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header__menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 350px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                transition: var(--transition);
+                box-shadow: var(--shadow-xl);
+                z-index: 1000;
+            }
+            .header__menu.active {
+                right: 0;
+            }
+            .header__hamburger {
+                display: flex;
+            }
+            .hero__title {
+                font-size: 2.5rem;
+            }
+            .hero__title .jp {
+                font-size: 1.6rem;
+            }
+            .hero {
+                padding: 130px 0 60px;
+            }
+            .section {
+                padding: 60px 0;
+            }
+            .section__title {
+                font-size: 2rem;
+            }
+            .cta-section__title {
+                font-size: 2rem;
+            }
+            .hero__floating-card {
+                display: none;
+            }
+            .testimonials__grid {
+                grid-template-columns: 1fr;
+            }
+            .footer__grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero__title {
+                font-size: 2rem;
+            }
+            .hero__title .jp {
+                font-size: 1.3rem;
+            }
+            .hero__subtitle {
+                font-size: 1rem;
+            }
+            .hero__buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .container {
+                padding: 0 20px;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ============ HEADER ============ -->
+    <header class="header" id="header">
+        <nav class="header__nav container">
+            <a href="#" class="header__logo">
+                <div class="header__logo-icon">寿</div>
+                <span class="header__logo-text">SUSHI <span>Vibe</span></span>
+            </a>
+            <ul class="header__menu" id="navMenu">
+                <li><a href="#home" class="header__link">Home</a></li>
+                <li><a href="#about" class="header__link">About</a></li>
+                <li><a href="#services" class="header__link">Services</a></li>
+                <li><a href="#contact" class="header__link">Contact</a></li>
+                <li><a href="#contact" class="header__cta">Book Now</a></li>
+            </ul>
+            <button class="header__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero" id="home">
+        <div class="hero__pattern"></div>
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <div class="hero__badge">
+                        <i class="fas fa-star"></i> THE ART OF JOYFUL SUSHI
+                    </div>
+                    <h1 class="hero__title">
+                        SUSHI Vibe
+                        <span class="jp">快樂壽司</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Experience the <strong>art of joyful sushi</strong>. From intimate home catering to grand weddings and corporate events — we bring the sushi bar to you.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#services" class="btn btn--primary">
+                            <i class="fas fa-fish"></i> Our Services
+                        </a>
+                        <a href="#contact" class="btn btn--dark">
+                            <i class="fas fa-calendar-check"></i> Book Now
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <span class="hero__sushi-icon">🍣</span>
+                    <div class="hero__floating-card">
+                        <i class="fas fa-star"></i>
+                        <span>Unforgettable Experience!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__visual">
+                    <span class="about__icon-big">🍱</span>
+                    <div class="about__badge">
+                        <span class="about__badge-icon">🏆</span>
+                        <span class="about__badge-text">Premium Catering</span>
+                    </div>
+                </div>
+                <div class="about__text">
+                    <span class="section__subtitle">About Us</span>
+                    <h3>The Art of Joyful Sushi</h3>
+                    <p>
+                        <strong>SUSHI Vibe</strong> brings the elegance and artistry of Japanese sushi to your special moments. We specialize in creating <strong>unforgettable sushi experiences</strong> tailored to your event — whether it's a cozy home gathering, a lavish wedding, or a corporate celebration.
+                    </p>
+                    <p>
+                        Every roll is crafted with precision, passion, and the freshest ingredients. With SUSHI Vibe, you don't just eat sushi — you <strong>experience joy</strong>.
+                    </p>
+                    <div class="about__features">
+                        <div class="about__feature"><i class="fas fa-check-circle"></i> Fresh Ingredients</div>
+                        <div class="about__feature"><i class="fas fa-check-circle"></i> Expert Sushi Chefs</div>
+                        <div class="about__feature"><i class="fas fa-check-circle"></i> Customized Menus</div>
+                        <div class="about__feature"><i class="fas fa-check-circle"></i> Full Event Setup</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES SECTION ============ -->
+    <section class="section section--cream" id="services">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__subtitle">Catering & Events</span>
+                <h2 class="section__title">Our Services</h2>
+                <p class="section__desc">We bring the full sushi experience to your event — beautifully presented and absolutely delicious.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card__icon"><i class="fas fa-home"></i></div>
+                    <h3 class="service-card__title">Home Catering</h3>
+                    <p class="service-card__desc">Intimate sushi experiences in the comfort of your home. Perfect for family gatherings and dinner parties.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon"><i class="fas fa-ring"></i></div>
+                    <h3 class="service-card__title">Weddings</h3>
+                    <p class="service-card__desc">Elegant sushi bars for your special day. Customized menus that wow your guests and create lasting memories.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon"><i class="fas fa-birthday-cake"></i></div>
+                    <h3 class="service-card__title">Birthdays</h3>
+                    <p class="service-card__desc">Celebrate with style! Interactive sushi stations that make your birthday party truly unforgettable.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon"><i class="fas fa-building"></i></div>
+                    <h3 class="service-card__title">Corporate Events</h3>
+                    <p class="service-card__desc">Impress your clients and team with premium sushi catering. Professional, punctual, and exceptional quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA SECTION ============ -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-section__content">
+                <h2 class="cta-section__title">Book Your Unforgettable Sushi Experience!</h2>
+                <p class="cta-section__desc">Let us craft a customized sushi menu for your next event. Weddings, birthdays, corporate events, or home catering — we deliver joy in every roll.</p>
+                <a href="#contact" class="btn btn--white">
+                    <i class="fas fa-calendar-check"></i> Get a Quote Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__subtitle">Testimonials</span>
+                <h2 class="section__title">What Our Clients Say</h2>
+            </div>
+            <div class="testimonials__grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__quote">"</div>
+                    <p class="testimonial-card__text">SUSHI Vibe made our wedding reception absolutely spectacular! The sushi bar was elegant, delicious, and our guests couldn't stop talking about it.</p>
+                    <div class="testimonial-card__author">Meron & Dawit</div>
+                    <div class="testimonial-card__event">Wedding Reception</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__quote">"</div>
+                    <p class="testimonial-card__text">We hired SUSHI Vibe for our corporate event and it was a huge success. Professional, punctual, and the sushi was world-class. Highly recommended!</p>
+                    <div class="testimonial-card__author">Abebe K.</div>
+                    <div class="testimonial-card__event">Corporate Event</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__quote">"</div>
+                    <p class="testimonial-card__text">My birthday party became unforgettable thanks to SUSHI Vibe. The interactive sushi station was so fun and the flavors were incredible!</p>
+                    <div class="testimonial-card__author">Selam T.</div>
+                    <div class="testimonial-card__event">Birthday Party</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section class="section section--cream" id="contact">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__subtitle">Get In Touch</span>
+                <h2 class="section__title">Contact Us</h2>
+                <p class="section__desc">Ready to book your sushi experience? Reach out and let's plan something amazing.</p>
+            </div>
+            <div class="contact__grid">
+                <div class="contact__info">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 25px; color: var(--dark);">SUSHI Vibe</h3>
+                    <p style="font-family: 'Noto Sans JP', sans-serif; font-size: 1.2rem; color: var(--primary); margin-bottom: 20px; font-weight: 700;">快樂壽司</p>
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <div class="contact__info-label">Location</div>
+                            <div class="contact__info-value">Addis Ababa, Ethiopia</div>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <div class="contact__info-label">Phone</div>
+                            <div class="contact__info-value">
+                                <a href="tel:0927249999" style="color: var(--primary); font-weight: 600;">0927249999</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="contact__info-label">Email</div>
+                            <div class="contact__info-value">
+                                <a href="mailto:abdulchater@gmail.com" style="color: var(--primary); font-weight: 600;">abdulchater@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__form">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 25px; color: var(--dark);">Book Your Event</h3>
+                    <div class="contact__form-group">
+                        <label class="contact__form-label" for="name">Your Name</label>
+                        <input type="text" id="name" class="contact__form-input" placeholder="Enter your name">
+                    </div>
+                    <div class="contact__form-group">
+                        <label class="contact__form-label" for="email">Email Address</label>
+                        <input type="email" id="email" class="contact__form-input" placeholder="Enter your email">
+                    </div>
+                    <div class="contact__form-group">
+                        <label class="contact__form-label" for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="contact__form-input" placeholder="Enter your phone">
+                    </div>
+                    <div class="contact__form-group">
+                        <label class="contact__form-label" for="event">Event Type</label>
+                        <select id="event" class="contact__form-select">
+                            <option value="">Select your event type</option>
+                            <option value="home">Home Catering</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="contact__form-group">
+                        <label class="contact__form-label" for="message">Tell Us About Your Event</label>
+                        <textarea id="message" class="contact__form-textarea" placeholder="Date, number of guests, any special requests..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Send Booking Request
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <h3 class="footer__title">SUSHI Vibe <span class="jp" style="font-size:0.9rem; color:var(--primary);">快樂壽司</span></h3>
+                    <p class="footer__brand-desc">
+                        The Art of Joyful Sushi. Bringing premium sushi catering to weddings, birthdays, corporate events, and homes across Addis Ababa.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/251927249999" target="_blank" class="footer__social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__title">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__links">
+                        <li><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:0927249999">0927249999</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:abdulchater@gmail.com">abdulchater@gmail.com</a></li>
+                        <li><i class="fas fa-clock"></i> Available for Events</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 SUSHI Vibe — 快樂壽司. All rights reserved. | The Art of Joyful Sushi</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ============ JAVASCRIPT ============ -->
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        document.querySelectorAll('.header__link, .header__cta').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Contact Form
+        const submitBtn = document.querySelector('.contact__form .btn--primary');
+        submitBtn.addEventListener('click', () => {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const eventType = document.getElementById('event').value;
+            const message = document.getElementById('message').value;
+            if (name && email && phone && eventType && message) {
+                alert('ありがとうございます! Thank you, ' + name + '! We will contact you soon to plan your ' + eventType + ' event. 🍣');
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('phone').value = '';
+                document.getElementById('event').value = '';
+                document.getElementById('message').value = '';
+            } else {
+                alert('Please fill in all fields before sending.');
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
